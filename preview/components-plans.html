@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <style>
+    html,body{margin:0;padding:0;background:var(--bg-base);font-family:var(--font-body);color:var(--text-secondary);}
+    .card{padding:22px 24px;}
+    h4{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-amber);margin:0 0 18px;}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+    .plan{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:18px;}
+    .plan.featured{border-color:rgba(245,158,11,0.25);box-shadow:0 0 30px rgba(245,158,11,0.08);}
+    .eb{font-family:var(--font-display);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-amber);margin-bottom:6px;}
+    .name{font-family:var(--font-heading);font-weight:700;font-size:18px;color:var(--text-primary);margin:0;}
+    .ideal{font-size:10.5px;color:var(--text-muted);margin:2px 0 14px;}
+    .price{display:flex;align-items:baseline;gap:4px;}
+    .price .num{font-family:var(--font-mono);font-size:32px;font-weight:700;color:var(--text-primary);line-height:1;}
+    .price .cur{font-family:var(--font-mono);font-size:11px;color:var(--text-muted);}
+    .cycle{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;margin-bottom:10px;}
+    .mensual{display:flex;align-items:baseline;gap:6px;padding:8px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:10px;}
+    .mensual .num{font-family:var(--font-mono);font-size:15px;font-weight:600;color:var(--accent-amber);}
+    .mensual .lbl{font-size:9.5px;color:var(--text-muted);}
+    ul{list-style:none;padding:0;margin:0 0 10px;display:flex;flex-direction:column;gap:5px;}
+    li{display:flex;align-items:flex-start;gap:8px;font-size:11px;line-height:1.45;color:var(--text-secondary);}
+    li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent-amber);flex-shrink:0;margin-top:6px;}
+    .toggle{font-family:var(--font-mono);font-size:9.5px;color:var(--text-muted);border:1px solid var(--border);background:transparent;border-radius:6px;padding:6px 10px;}
+  </style>
+</head>
+<body><div class="card">
+  <h4>Plans · from PAQUETES_COMERCIALES.md · summary on surface · detail behind toggle</h4>
+  <div class="grid">
+    <div class="plan">
+      <div class="eb">Plan</div>
+      <h3 class="name">Básico</h3>
+      <div class="ideal">Talleres, ferreterías, 1–5 empleados</div>
+      <div class="price"><span class="cur">$</span><span class="num">350</span><span class="cur">USD</span></div>
+      <div class="cycle">Arranque · pago único</div>
+      <div class="mensual"><span class="num">$25</span><span class="lbl">/mes · 3 usuarios · +$5/extra</span></div>
+      <ul><li>3 usuarios incluidos, 1 sucursal</li><li>Todos los módulos</li><li>Soporte email · 72h</li></ul>
+      <button class="toggle">↓ Ver detalle completo</button>
+    </div>
+    <div class="plan featured">
+      <div class="eb">Más vendido</div>
+      <h3 class="name">Profesional</h3>
+      <div class="ideal">Empresas medianas, fábricas, 5–20 empleados</div>
+      <div class="price"><span class="cur">$</span><span class="num">700</span><span class="cur">USD</span></div>
+      <div class="cycle">Arranque · pago único</div>
+      <div class="mensual"><span class="num">$50</span><span class="lbl">/mes · 10 usuarios · +$4/extra</span></div>
+      <ul><li>10 usuarios, hasta 3 sucursales</li><li>Carga inicial Excel · 500 reg.</li><li>Email + WhatsApp · 24h</li></ul>
+      <button class="toggle">↓ Ver detalle completo</button>
+    </div>
+    <div class="plan">
+      <div class="eb">Plan</div>
+      <h3 class="name">Corporativo</h3>
+      <div class="ideal">Múltiples sedes, instituciones</div>
+      <div class="price"><span class="cur">$</span><span class="num">1,500</span><span class="cur">USD</span></div>
+      <div class="cycle">Arranque · pago único</div>
+      <div class="mensual"><span class="num">$90</span><span class="lbl">/mes · 25 usuarios · +$3/extra</span></div>
+      <ul><li>25 usuarios, sucursales ilimitadas</li><li>Migración asistida</li><li>Dedicado · 8h · llamadas</li></ul>
+      <button class="toggle">↓ Ver detalle completo</button>
+    </div>
+  </div>
+</div></body></html>

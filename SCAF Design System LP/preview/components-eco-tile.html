@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-base);font-family:var(--font-body);color:var(--text-secondary);}
+  .card{padding:22px 24px;}
+  h4{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-amber);margin:0 0 14px;}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .eco{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:16px 14px;transition:all .25s;}
+  .icon{font-size:1.3rem;margin-bottom:8px;}
+  .name{font-family:var(--font-heading);font-weight:700;font-size:12px;color:var(--text-primary);margin-bottom:3px;}
+  .desc{font-size:10px;line-height:1.45;color:var(--text-muted);}
+</style></head>
+<body><div class="card">
+  <h4>Ecosystem tile · 16+ module grid</h4>
+  <div class="grid">
+    <div class="eco"><div class="icon" style="color:#3b82f6;">☐</div><div class="name">Inventario</div><div class="desc">CRUD, búsqueda, paginación server-side</div></div>
+    <div class="eco"><div class="icon" style="color:#f59e0b;">⚇</div><div class="name">Códigos QR</div><div class="desc">Generación automática, escaneo móvil</div></div>
+    <div class="eco"><div class="icon" style="color:#22c55e;">👤</div><div class="name">Empleados</div><div class="desc">Cédula, cargo, departamento, U.O.</div></div>
+    <div class="eco"><div class="icon" style="color:#ec4899;">⚙</div><div class="name">Multi-Scope</div><div class="desc">Áreas, Habitaciones, Equipos, Flota</div></div>
+  </div>
+</div></body></html>

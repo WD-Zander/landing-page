@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-base);font-family:var(--font-body);color:var(--text-secondary);}
+  .card{padding:24px;}
+  h4{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-amber);margin:0 0 16px;}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .swatch{padding:14px;background:var(--bg-elevated);border:1px solid var(--border-accent);display:flex;flex-direction:column;justify-content:space-between;min-height:84px;}
+  .swatch.sm{border-radius:6px;}
+  .swatch.md{border-radius:12px;}
+  .swatch.lg{border-radius:16px;}
+  .swatch.pill{border-radius:999px;padding:14px 22px;}
+  .name{font-family:var(--font-heading);font-weight:700;font-size:13px;color:var(--text-primary);}
+  .val{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);}
+</style></head>
+<body><div class="card">
+  <h4>Radii</h4>
+  <div class="row">
+    <div class="swatch sm"><span class="name">sm · 6px</span><span class="val">buttons, chips</span></div>
+    <div class="swatch md"><span class="name">md · 12px</span><span class="val">cards, panels</span></div>
+    <div class="swatch lg"><span class="name">lg · 16px</span><span class="val">large panels</span></div>
+    <div class="swatch pill"><span class="name">pill · 999px</span><span class="val">status, fab</span></div>
+  </div>
+</div></body></html>

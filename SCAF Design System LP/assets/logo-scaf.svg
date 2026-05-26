@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" width="240" height="64">
+  <defs>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"></stop>
+      <stop offset="100%" stop-color="#fbbf24"></stop>
+    </linearGradient>
+  </defs>
+  <text x="0" y="50" font-family="Outfit, system-ui, sans-serif" font-weight="800" font-size="56" letter-spacing="-2" fill="#f0f0f5">SC<tspan fill="url(#amber)">AF</tspan></text>
+</svg>

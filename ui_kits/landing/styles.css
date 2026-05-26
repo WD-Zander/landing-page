@@ -1,0 +1,217 @@
+/* SCAF Landing UI Kit styles — extracted/condensed from source/landing-page.html */
+
+@import url("../../colors_and_type.css");
+
+* { box-sizing: border-box; }
+html,body { margin: 0; padding: 0; background: var(--bg-base); color: var(--text-secondary); font-family: var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+
+.dsk-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.dsk-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-amber);
+  display: inline-block;
+}
+
+/* ── Nav ───────────────────────────────────────── */
+.dsk-nav {
+  position: sticky; top: 0; z-index: 100; height: 64px;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+}
+.dsk-nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; gap: 24px; }
+.dsk-logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+.dsk-logo-accent { color: var(--accent-amber); }
+.dsk-nav-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+.dsk-nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-muted); position: relative; transition: color .2s; }
+.dsk-nav-links a:hover, .dsk-nav-links a.active { color: var(--text-primary); }
+.dsk-nav-links a.active::after { content:''; position: absolute; left: 0; right: 0; bottom: -22px; height: 2px; background: var(--accent-amber); }
+
+/* ── Buttons ───────────────────────────────────── */
+.dsk-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+  border: none; transition: all .25s var(--ease-out-soft); cursor: pointer;
+}
+.dsk-btn-sm { padding: 10px 20px; font-size: 0.82rem; }
+.dsk-btn-primary { background: linear-gradient(135deg, var(--accent-amber), var(--accent-copper)); color: #0a0a0f; box-shadow: var(--glow-amber), 0 4px 12px rgba(0,0,0,0.3); }
+.dsk-btn-primary:hover { transform: translateY(-2px); box-shadow: var(--glow-amber-hot); }
+.dsk-btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border-accent); }
+.dsk-btn-secondary:hover { border-color: var(--accent-amber-border); background: var(--glass-bg); }
+.dsk-btn-whatsapp { background: rgba(37,211,102,0.12); color: #25d366; border: 1px solid rgba(37,211,102,0.3); }
+
+/* ── Badges ────────────────────────────────────── */
+.dsk-badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; font-family: var(--font-body); }
+.dsk-badge-dot { width: 5px; height: 5px; border-radius: 50%; }
+.dsk-badge-green { background: rgba(34,197,94,0.10); color: var(--status-green-deep); border: 1px solid rgba(34,197,94,0.20); }
+.dsk-badge-green .dsk-badge-dot { background: var(--status-green); }
+.dsk-badge-amber { background: rgba(234,179,8,0.10); color: var(--status-amber-deep); border: 1px solid rgba(234,179,8,0.22); }
+.dsk-badge-amber .dsk-badge-dot { background: var(--status-amber); }
+.dsk-badge-red { background: rgba(239,68,68,0.10); color: var(--status-red-deep); border: 1px solid rgba(239,68,68,0.20); }
+.dsk-badge-red .dsk-badge-dot { background: var(--status-red); }
+
+/* ── Cards ─────────────────────────────────────── */
+.dsk-card { background: var(--glass-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px; transition: transform .3s, border-color .3s, box-shadow .3s; }
+.dsk-card-glass:hover { border-color: var(--border-accent); transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.dsk-card-pain { background: var(--bg-elevated); text-align: center; position: relative; overflow: hidden; padding: 32px 28px; }
+.dsk-card-pain::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--status-red), transparent); opacity: .6; }
+.dsk-card-pain h3 { font-size: 1.05rem; margin: 0 0 10px; }
+.dsk-card-pain p  { font-size: 0.85rem; line-height: 1.6; margin: 0; }
+.dsk-pain-icon { width: 64px; height: 64px; border-radius: var(--radius-md); background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; color: var(--status-red); }
+.dsk-pain-icon svg { width: 28px; height: 28px; stroke: var(--status-red); stroke-width: 1.5; fill: none; }
+.dsk-pain-stat { display: inline-block; margin-top: 14px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--status-red); padding: 4px 10px; background: rgba(239,68,68,0.06); border-radius: 999px; border: 1px solid rgba(239,68,68,0.12); }
+
+/* ── Diff cards ───────────────────────────────── */
+.dsk-diff-card { padding: 32px; }
+.dsk-diff-card.dsk-wide { grid-column: span 2; }
+.dsk-diff-card.dsk-highlight { border-color: var(--accent-amber-border); box-shadow: 0 0 30px rgba(245,158,11,0.08); }
+.dsk-diff-card h3 { font-size: 1.15rem; margin: 0 0 8px; }
+.dsk-diff-card p  { font-size: 0.88rem; line-height: 1.6; margin: 0; }
+.dsk-diff-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.2rem; }
+.dsk-diff-icon-amber { background: var(--accent-amber-glow); color: var(--accent-amber); }
+.dsk-diff-icon-blue  { background: var(--brand-blue-glow); color: var(--brand-blue); }
+.dsk-diff-icon-green { background: rgba(34,197,94,0.12); color: var(--status-green); }
+
+/* ── Ecosystem tile ─────────────────────────── */
+.dsk-eco-card { background: var(--glass-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 16px; transition: transform .25s, border-color .25s, box-shadow .25s; }
+.dsk-eco-card:hover { border-color: var(--accent-amber-border); transform: translateY(-3px); box-shadow: var(--shadow-card); }
+.dsk-eco-icon { font-size: 1.4rem; margin-bottom: 10px; }
+.dsk-eco-name { font-family: var(--font-heading); font-size: 0.88rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.dsk-eco-desc { font-size: 0.76rem; line-height: 1.5; color: var(--text-muted); }
+
+/* ── Trust bar ───────────────────────────────── */
+.dsk-trust-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-elevated); padding: 36px 0; }
+.dsk-trust-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+.dsk-trust-item { text-align: center; padding: 0 16px; border-right: 1px solid var(--border); }
+.dsk-trust-item:last-child { border-right: none; }
+.dsk-trust-num { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 600; color: var(--accent-amber); margin-bottom: 4px; }
+.dsk-trust-lbl { font-size: 0.78rem; color: var(--text-muted); }
+
+/* ── Step ───────────────────────────────────── */
+.dsk-step { text-align: center; }
+.dsk-step-num { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--accent-amber-border); background: var(--bg-base); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--accent-amber); }
+.dsk-step h3 { font-size: 1.15rem; margin: 0 0 8px; }
+.dsk-step p  { font-size: 0.88rem; line-height: 1.6; margin: 0; max-width: 280px; margin-left: auto; margin-right: auto; }
+
+/* ── Contact cards ──────────────────────────── */
+.dsk-contact { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 10px; border: 1px solid var(--border); background: var(--glass-bg); transition: all .25s; }
+.dsk-contact:hover { transform: translateY(-2px); }
+.dsk-contact-wa { border-color: rgba(37,211,102,0.3); background: rgba(37,211,102,0.06); }
+.dsk-contact-em { border-color: var(--accent-amber-border); background: var(--accent-amber-glow); }
+.dsk-contact-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.dsk-contact-wa .dsk-contact-icon { background: rgba(37,211,102,0.15); color: #25d366; }
+.dsk-contact-em .dsk-contact-icon { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
+.dsk-contact-text { display: flex; flex-direction: column; gap: 2px; }
+.dsk-contact-label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+.dsk-contact-value { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--text-primary); }
+.dsk-contact-hint  { font-size: 11px; color: var(--text-muted); }
+
+/* ── Mock frame ─────────────────────────────── */
+.mockup-frame { background: #fcfcfc; border-radius: 10px; border: 1px solid #e4e4e7; box-shadow: var(--shadow-mockup); overflow: hidden; font-family: var(--font-heading); font-size: 11px; color: #09090b; }
+.mockup-titlebar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: #f4f4f5; border-bottom: 1px solid #e4e4e7; }
+.mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
+.mockup-dot.red    { background: #ef4444; }
+.mockup-dot.yellow { background: #eab308; }
+.mockup-dot.green  { background: #22c55e; }
+.mockup-title { flex: 1; text-align: center; font-size: 9px; color: #71717a; font-family: var(--font-body); }
+.mockup-body { display: flex; }
+.mockup-sidebar { width: 42px; background: var(--brand-slate); display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 8px; }
+.sb-item { width: 22px; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.15); }
+.sb-item.active { background: rgba(255,255,255,0.7); }
+.mockup-main { flex: 1; padding: 12px; }
+
+.mock-kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.mock-kpi { background: #fff; border: 1px solid #e4e4e7; border-radius: 6px; padding: 8px; }
+.mock-kpi-label { font-size: 7px; color: #71717a; margin-bottom: 2px; }
+.mock-kpi-value { font-family: var(--font-mono); font-size: 13px; font-weight: 600; }
+.mock-kpi-value.green { color: #15803d; }
+.mock-kpi-value.amber { color: #b45309; }
+.mock-kpi-value.blue  { color: #2563eb; }
+.mock-kpi-value.red   { color: #b91c1c; }
+
+/* ── Hero ──────────────────────────────────── */
+.dsk-hero { padding: 110px 0 80px; position: relative; overflow: hidden; }
+.dsk-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 75% 25%, rgba(245,158,11,0.06) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(37,99,235,0.04) 0%, transparent 50%); pointer-events: none; }
+.dsk-hero-grid { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, transparent 1px, transparent 80px); pointer-events: none; }
+.dsk-hero-inner { display: grid; grid-template-columns: 55% 45%; align-items: center; gap: 40px; position: relative; z-index: 1; }
+.dsk-hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border: 1px solid var(--accent-amber-border); border-radius: 999px; background: var(--accent-amber-glow); margin-bottom: 20px; }
+.dsk-hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-amber); }
+.dsk-hero h1 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); font-weight: 800; margin: 0 0 20px; letter-spacing: -0.03em; }
+.dsk-hero-sub { font-size: 1.1rem; line-height: 1.7; max-width: 520px; margin-bottom: 32px; }
+.dsk-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.dsk-hero-micro { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.dsk-hero-micro span { display: flex; align-items: center; gap: 6px; }
+.dsk-hero-micro .pip { width: 4px; height: 4px; border-radius: 50%; background: var(--status-green); }
+
+/* ── Section ─────────────────────────────── */
+.dsk-section { padding: 100px 0; position: relative; }
+.dsk-section.elevated { background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.dsk-section-header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+.dsk-section-header h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; margin-top: 12px; margin-bottom: 0; }
+.dsk-section-header p { margin-top: 14px; font-size: 0.95rem; }
+
+.dsk-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.dsk-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+.dsk-feature-block { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; }
+.dsk-feature-block.reverse .dsk-feature-text { order: 2; }
+.dsk-feature-block.reverse .dsk-feature-mock { order: 1; }
+.dsk-feature-text h3 { font-size: 1.5rem; font-weight: 700; margin: 12px 0 14px; }
+.dsk-feature-text p  { font-size: 0.92rem; line-height: 1.65; margin-bottom: 18px; }
+.dsk-feature-bullets { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.dsk-feature-bullets li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.dsk-feature-bullets li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-amber); flex-shrink: 0; }
+
+/* ── Footer ────────────────────────────── */
+.dsk-footer { background: var(--bg-elevated); padding: 60px 0 24px; border-top: 1px solid var(--border); }
+.dsk-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.dsk-footer-brand .dsk-logo { font-size: 1.5rem; }
+.dsk-footer-brand p { margin-top: 12px; font-size: 0.85rem; line-height: 1.65; max-width: 380px; }
+.dsk-footer-col h4 { font-family: var(--font-display); font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-amber); margin: 0 0 14px; }
+.dsk-footer-col a { display: block; padding: 4px 0; font-size: 0.85rem; color: var(--text-muted); transition: color .2s; }
+.dsk-footer-col a:hover { color: var(--text-primary); }
+.dsk-footer-bottom { display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid var(--border); }
+.dsk-footer-bottom p { font-size: 0.78rem; color: var(--text-muted); margin: 0; }
+
+/* ── Pricing (NEW — derived from PAQUETES_COMERCIALES.md) ───── */
+.dsk-plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.dsk-plan { background: var(--glass-bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 28px; display: flex; flex-direction: column; transition: all .25s; }
+.dsk-plan:hover { border-color: var(--accent-amber-border); transform: translateY(-3px); }
+.dsk-plan.featured { border-color: var(--accent-amber-border); box-shadow: 0 0 30px rgba(245,158,11,0.10); }
+.dsk-plan-eyebrow { font-family: var(--font-display); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-amber); margin-bottom: 8px; }
+.dsk-plan-name { font-family: var(--font-heading); font-weight: 700; font-size: 1.6rem; color: var(--text-primary); margin: 0; }
+.dsk-plan-ideal { font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 22px; }
+.dsk-plan-price { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.dsk-plan-price .num { font-family: var(--font-mono); font-size: 2.4rem; font-weight: 700; color: var(--text-primary); line-height: 1; }
+.dsk-plan-price .cur { font-family: var(--font-mono); font-size: 1rem; color: var(--text-muted); }
+.dsk-plan-cycle { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+.dsk-plan-mensual { display: flex; align-items: baseline; gap: 6px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+.dsk-plan-mensual .num { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 600; color: var(--accent-amber); }
+.dsk-plan-mensual .lbl { font-size: 0.78rem; color: var(--text-muted); }
+.dsk-plan-feats { list-style: none; padding: 0; margin: 0 0 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.dsk-plan-feats li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; line-height: 1.5; }
+.dsk-plan-feats li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent-amber); flex-shrink: 0; margin-top: 8px; }
+.dsk-plan-detail-toggle { background: transparent; border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-muted); padding: 8px 14px; font-family: var(--font-mono); font-size: 0.72rem; cursor: pointer; transition: all .2s; margin-top: auto; }
+.dsk-plan-detail-toggle:hover { border-color: var(--accent-amber-border); color: var(--accent-amber); }
+.dsk-plan-detail { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-accent); font-size: 0.8rem; line-height: 1.6; }
+.dsk-plan-detail.open { display: block; }
+.dsk-plan-detail h5 { font-family: var(--font-display); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-amber); margin: 0 0 6px; }
+.dsk-plan-detail ul { padding-left: 16px; margin: 0 0 10px; }
+
+@media (max-width: 980px) {
+  .dsk-hero-inner, .dsk-feature-block { grid-template-columns: 1fr; }
+  .dsk-feature-block.reverse .dsk-feature-text { order: 0; }
+  .dsk-grid-3, .dsk-grid-4, .dsk-plans-grid, .dsk-footer-grid { grid-template-columns: 1fr 1fr; }
+  .dsk-trust-grid { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 640px) {
+  .dsk-grid-3, .dsk-grid-4, .dsk-plans-grid, .dsk-footer-grid, .dsk-trust-grid { grid-template-columns: 1fr; }
+  .dsk-nav-links { display: none; }
+}

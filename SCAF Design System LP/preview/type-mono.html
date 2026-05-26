@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-base);font-family:var(--font-body);color:var(--text-secondary);}
+  .card{padding:24px;display:flex;align-items:center;gap:32px;}
+  .specimen{font-family:var(--font-mono);font-weight:600;font-size:56px;line-height:1;color:var(--accent-amber);}
+  .specimen .dim{color:var(--text-muted);font-weight:400;}
+  .meta{flex:1;}
+  .meta h4{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-amber);margin:0 0 6px;}
+  .meta .name{font-family:var(--font-heading);font-weight:700;font-size:20px;color:var(--text-primary);margin-bottom:4px;}
+  .meta .use{font-size:12.5px;line-height:1.55;margin-bottom:10px;}
+  .meta code{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);background:var(--bg-elevated);padding:3px 7px;border-radius:4px;border:1px solid var(--border);}
+  .examples{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .examples span{font-family:var(--font-mono);font-size:11px;color:var(--text-primary);padding:3px 8px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:4px;}
+</style></head>
+<body><div class="card">
+  <div class="specimen"><span class="dim">$</span>2.4M</div>
+  <div class="meta">
+    <h4>Mono · JetBrains Mono</h4>
+    <div class="name">Data, codes, KPIs, micro</div>
+    <div class="use">All numbers and identifiers go in mono. Weights 400 / 600. Used for hook stat, KPI tiles, asset codes, pagination, "Fuente:" chip.</div>
+    <div class="examples">
+      <span>AF-0014</span><span>$2.4M</span><span>1,247</span><span>PM-312</span><span>10/05 09:42</span><span>V-18.432.109</span>
+    </div>
+  </div>
+</div></body></html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--bg-base);font-family:var(--font-body);color:var(--text-secondary);}
+  .card{padding:24px;display:flex;align-items:center;gap:32px;}
+  .specimen{font-family:var(--font-display);font-size:80px;line-height:0.9;color:var(--text-primary);letter-spacing:0.02em;}
+  .specimen .small{font-size:18px;letter-spacing:0.15em;color:var(--accent-amber);display:block;margin-bottom:6px;}
+  .meta{flex:1;}
+  .meta h4{font-family:var(--font-display);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-amber);margin:0 0 6px;}
+  .meta .name{font-family:var(--font-heading);font-weight:700;font-size:20px;color:var(--text-primary);margin-bottom:4px;}
+  .meta .use{font-size:12.5px;line-height:1.55;margin-bottom:10px;}
+  .meta code{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);background:var(--bg-elevated);padding:3px 7px;border-radius:4px;border:1px solid var(--border);}
+</style></head>
+<body><div class="card">
+  <div class="specimen">
+    <span class="small">EL PROBLEMA</span>
+    ABC 123
+  </div>
+  <div class="meta">
+    <h4>Display · Bebas Neue</h4>
+    <div class="name">Eyebrows & micro labels</div>
+    <div class="use">UPPERCASE only. Letter-spacing <code>0.15em</code>. Used for section eyebrows, "Fuente:" attribution chips, and the hero badge text. Never used at body sizes.</div>
+    <code>--font-display</code>
+  </div>
+</div></body></html>
