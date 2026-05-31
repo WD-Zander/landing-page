@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git commit -m ':*)",
-      "Bash(git commit --allow-empty -m ':*)"
+      "Bash(git commit --allow-empty -m ':*)",
+      "Bash(awk 'NR>=1262 && NR<=1380 {printf \"%d|%s\\\\n\", NR, $0}' \"c:/Users/zande/Documents/Proyectos/landing-page/index.html\")",
+      "Bash(awk 'NR>=3818 && NR<=3870 {printf \"%d|%s\\\\n\", NR, $0}' \"c:/Users/zande/Documents/Proyectos/landing-page/index.html\")"
     ]
   }
 }
