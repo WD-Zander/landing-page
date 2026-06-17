@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(git rm *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "PowerShell(ipconfig /flushdns)",
+      "PowerShell(Resolve-DnsName getsmcaf.com -Type A -Server 8.8.8.8 -ErrorAction SilentlyContinue)",
+      "PowerShell(Resolve-DnsName www.getsmcaf.com -Type CNAME -Server 8.8.8.8 -ErrorAction SilentlyContinue)",
+      "PowerShell(Resolve-DnsName getsmcaf.com -Type A -Server ns21.domaincontrol.com -ErrorAction SilentlyContinue)",
+      "PowerShell(Resolve-DnsName www.getsmcaf.com -Type CNAME -Server ns21.domaincontrol.com -ErrorAction SilentlyContinue)",
+      "PowerShell(Write-Output \"=== Autoritativo GoDaddy \\(ns21\\) ===\"; Resolve-DnsName getsmcaf.com -Type A -Server ns21.domaincontrol.com -ErrorAction SilentlyContinue | Where-Object {$_.Type -eq 'A'} | Select-Object Name, IPAddress; Write-Output \"=== Google DNS \\(8.8.8.8\\) ===\"; Resolve-DnsName getsmcaf.com -Type A -Server 8.8.8.8 -ErrorAction SilentlyContinue | Where-Object {$_.Type -eq 'A'} | Select-Object Name, IPAddress; Write-Output \"=== www CNAME \\(autoritativo\\) ===\"; Resolve-DnsName www.getsmcaf.com -Type CNAME -Server ns21.domaincontrol.com -ErrorAction SilentlyContinue | Where-Object {$_.Type -eq 'CNAME'} | Select-Object Name, NameHost)",
+      "PowerShell($ts = Get-Date -Format \"HH:mm:ss\"; Write-Output \"Hora: $ts\"; Write-Output \"=== Autoritativo GoDaddy \\(ns21\\) ===\"; Resolve-DnsName getsmcaf.com -Type A -Server ns21.domaincontrol.com -ErrorAction SilentlyContinue | Where-Object {$_.Type -eq 'A'} | Select-Object Name, IPAddress)",
+      "PowerShell(Write-Output \"=== getsmcaf.com \\(A\\) ===\"; Resolve-DnsName getsmcaf.com -Type A -Server 8.8.8.8 -ErrorAction SilentlyContinue | Where-Object {$_.Type -eq 'A'} | Select-Object Name, IPAddress; Write-Output \"=== www \\(CNAME\\) ===\"; Resolve-DnsName www.getsmcaf.com -Server 8.8.8.8 -ErrorAction SilentlyContinue | Select-Object Name, Type, NameHost)",
+      "Bash(git restore *)",
+      "Bash(curl -s https://getsmcaf.com)"
     ]
   }
 }

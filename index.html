@@ -1908,6 +1908,107 @@
       margin-bottom: 14px;
     }
 
+    .plan-quote {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 4px;
+    }
+
+    /* ── SMCAF Tech (servicios TI complementarios) ─────────── */
+    .svc-tech {
+      padding: 72px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .svc-tech-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    .svc-tech .eyebrow.blue {
+      color: var(--brand-blue);
+    }
+
+    .svc-tech-header h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--text-primary);
+      margin: 10px 0 8px;
+    }
+
+    .svc-tech-header p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .svc-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .svc-card:hover {
+      border-color: rgba(37, 99, 235, 0.45);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px -6px var(--brand-blue-glow);
+    }
+
+    .svc-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand-blue-glow);
+      color: var(--brand-blue);
+      margin-bottom: 12px;
+    }
+
+    .svc-card h3 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+      margin: 0 0 4px;
+    }
+
+    .svc-card p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .svc-tech-cta {
+      text-align: center;
+    }
+
+    .btn.btn-tech {
+      background: var(--brand-blue);
+      color: #fff;
+      border: 1px solid var(--brand-blue);
+    }
+
+    .btn.btn-tech:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
+
     .plan-mensual {
       display: flex;
       align-items: baseline;
@@ -3842,11 +3943,12 @@
     <div class="container">
       <div class="plans-header">
         <div class="eyebrow reveal">Planes</div>
-        <h2 class="reveal" style="transition-delay:0.1s;">Inversi&#243;n clara, retorno inmediato. Todos los
-          m&#243;dulos.</h2>
-        <p class="reveal" style="transition-delay:0.2s;">Sin costos ocultos ni restricciones funcionales. Pagas por
-          escala (activos gestionados y usuarios administrativos), no por funcionalidad. Los operadores son
-          ilimitados y sin costo en todos los planes. ROI desde el primer mes de operaci&#243;n.</p>
+        <h2 class="reveal" style="transition-delay:0.1s;">Un paquete para cada escala. Todos los
+          m&#243;dulos incluidos.</h2>
+        <p class="reveal" style="transition-delay:0.2s;">Sin restricciones funcionales: eliges tu plan por
+          escala (activos gestionados y usuarios administrativos), no por funcionalidad. Operadores
+          ilimitados en todos los planes y ROI desde el primer mes. Solicita tu cotizaci&#243;n
+          personalizada y recibe una propuesta a tu medida.</p>
       </div>
       <div class="plans-grid">
 
@@ -3855,12 +3957,8 @@
           <div class="plan-eyebrow">Plan</div>
           <h3 class="plan-name">Pymes</h3>
           <p class="plan-ideal">Talleres, ferreter&#237;as y comercios en crecimiento</p>
-          <div class="plan-price">
-            <span class="cur">$</span>
-            <span class="num">75,99</span>
-            <span class="cur">/mes</span>
-          </div>
-          <div class="plan-cycle">+ Implementaci&#243;n &#250;nica desde $500</div>
+          <div class="plan-quote">Cotizaci&#243;n personalizada</div>
+          <div class="plan-cycle">+ Implementaci&#243;n inicial &#250;nica</div>
           <ul class="plan-feats">
             <li>500 activos incluidos · 1 sucursal</li>
             <li>3 usuarios administrativos · operadores ilimitados</li>
@@ -3876,7 +3974,7 @@
             onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'&#8593; Ocultar detalle':'&#8595; Ver detalle completo';">&#8595;
             Ver detalle completo</button>
           <div class="plan-detail">
-            <h5>Implementaci&#243;n · Esencial ($500 pago &#250;nico)</h5>
+            <h5>Implementaci&#243;n · Esencial</h5>
             <ul>
               <li>Carga de hasta 500 activos (plantilla)</li>
               <li>Configuraci&#243;n RBAC b&#225;sica: roles, categor&#237;as y ubicaciones</li>
@@ -3886,8 +3984,8 @@
             <h5>Mensualidad</h5>
             <ul>
               <li>Actualizaciones del sistema y soporte t&#233;cnico</li>
-              <li>$25/mes por cada usuario administrativo extra</li>
-              <li>$20 por bloque adicional de +250 activos</li>
+              <li>Usuarios administrativos adicionales disponibles</li>
+              <li>Bloques adicionales de activos disponibles</li>
             </ul>
             <h5>No incluye</h5>
             <ul>
@@ -3903,12 +4001,8 @@
           <div class="plan-eyebrow">M&#225;s vendido</div>
           <h3 class="plan-name">Empresarial</h3>
           <p class="plan-ideal">Empresas medianas, f&#225;bricas y cl&#237;nicas multi-sucursal</p>
-          <div class="plan-price">
-            <span class="cur">$</span>
-            <span class="num">209,99</span>
-            <span class="cur">/mes</span>
-          </div>
-          <div class="plan-cycle">+ Implementaci&#243;n &#250;nica desde $1.500</div>
+          <div class="plan-quote">Cotizaci&#243;n personalizada</div>
+          <div class="plan-cycle">+ Implementaci&#243;n inicial &#250;nica</div>
           <ul class="plan-feats">
             <li>3.000 activos incluidos · 2 sucursales</li>
             <li>8 usuarios administrativos · operadores ilimitados</li>
@@ -3924,7 +4018,7 @@
             onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'&#8593; Ocultar detalle':'&#8595; Ver detalle completo';">&#8595;
             Ver detalle completo</button>
           <div class="plan-detail">
-            <h5>Implementaci&#243;n · Profesional ($1.500 pago &#250;nico)</h5>
+            <h5>Implementaci&#243;n · Profesional</h5>
             <ul>
               <li>Carga de 3.000 activos + empleados + proveedores</li>
               <li>Limpieza b&#225;sica de data</li>
@@ -3937,8 +4031,8 @@
             <h5>Mensualidad</h5>
             <ul>
               <li>Actualizaciones del sistema y soporte t&#233;cnico</li>
-              <li>$25/mes por cada usuario administrativo extra</li>
-              <li>$30 por bloque adicional de +500 activos</li>
+              <li>Usuarios administrativos adicionales disponibles</li>
+              <li>Bloques adicionales de activos disponibles</li>
             </ul>
             <h5>No incluye</h5>
             <ul>
@@ -3953,12 +4047,8 @@
           <div class="plan-eyebrow">Plan</div>
           <h3 class="plan-name">Corporativo</h3>
           <p class="plan-ideal">Corporativos, m&#250;ltiples sedes e instituciones</p>
-          <div class="plan-price">
-            <span class="cur">$</span>
-            <span class="num">409.99</span>
-            <span class="cur">/mes</span>
-          </div>
-          <div class="plan-cycle">+ Implementaci&#243;n &#250;nica desde $3.200</div>
+          <div class="plan-quote">Cotizaci&#243;n personalizada</div>
+          <div class="plan-cycle">+ Implementaci&#243;n inicial &#250;nica</div>
           <ul class="plan-feats">
             <li>5.000 activos incluidos · 3 sucursales</li>
             <li>16 usuarios administrativos · operadores ilimitados</li>
@@ -3974,7 +4064,7 @@
             onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'&#8593; Ocultar detalle':'&#8595; Ver detalle completo';">&#8595;
             Ver detalle completo</button>
           <div class="plan-detail">
-            <h5>Implementaci&#243;n · Enterprise ($3.200 pago &#250;nico)</h5>
+            <h5>Implementaci&#243;n · Enterprise</h5>
             <ul>
               <li>Carga de 4.000+ activos con migraci&#243;n desde sistema anterior (hasta 16h)</li>
               <li>Limpieza avanzada: dedup, jerarqu&#237;as y campos faltantes</li>
@@ -3989,8 +4079,8 @@
             <h5>Mensualidad</h5>
             <ul>
               <li>Actualizaciones del sistema, nuevos m&#243;dulos y soporte</li>
-              <li>$25/mes por cada usuario administrativo extra</li>
-              <li>$50 por bloque adicional de +1.000 activos</li>
+              <li>Usuarios administrativos adicionales disponibles</li>
+              <li>Bloques adicionales de activos disponibles</li>
             </ul>
           </div>
         </div>
@@ -4089,6 +4179,119 @@
               control de custodia y trazabilidad completa de cada activo y acci&#243;n.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     SMCAF TECH (servicios TI complementarios)
+     ═══════════════════════════════════════════════════════════ -->
+  <section class="svc-tech" id="servicios">
+    <div class="container">
+      <div class="svc-tech-header reveal">
+        <div class="eyebrow blue">SMCAF Tech</div>
+        <h2>M&#225;s all&#225; del software: servicios tecnol&#243;gicos a tu medida</h2>
+        <p>Adem&#225;s de la plataforma SMCAF, te acompa&#241;amos con soluciones t&#233;cnicas integrales:
+          desarrollo, datos, seguridad e infraestructura para llevar tu operaci&#243;n al siguiente nivel.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <h3>Automatizaci&#243;n de procesos</h3>
+          <p>Elimina tareas repetitivas con flujos y procesos automatizados a medida.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.05s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3>Software a la medida</h3>
+          <p>Programas y sistemas dise&#241;ados para tu operaci&#243;n espec&#237;fica.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.1s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+            </svg>
+          </div>
+          <h3>Bases de datos &amp; extracci&#243;n</h3>
+          <p>Consulta, integra y extrae informaci&#243;n &#250;til de tus datos.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.15s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="20" x2="12" y2="10" />
+              <line x1="18" y1="20" x2="18" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="16" />
+            </svg>
+          </div>
+          <h3>Informes &amp; reporter&#237;a</h3>
+          <p>Dashboards e informes para decidir con datos reales.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.2s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
+          </div>
+          <h3>CCTV &amp; videovigilancia</h3>
+          <p>Instalaci&#243;n y configuraci&#243;n de c&#225;maras de seguridad.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.25s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+              <line x1="6" y1="6" x2="6.01" y2="6" />
+              <line x1="6" y1="18" x2="6.01" y2="18" />
+            </svg>
+          </div>
+          <h3>Servidores &amp; infraestructura</h3>
+          <p>Montaje, configuraci&#243;n y mantenimiento de servidores.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.3s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
+          </div>
+          <h3>Redes &amp; conectividad</h3>
+          <p>Dise&#241;o y optimizaci&#243;n de redes cableadas e inal&#225;mbricas.</p>
+        </div>
+        <div class="svc-card reveal" style="transition-delay:0.35s;">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
+          </div>
+          <h3>Soporte inform&#225;tico integral</h3>
+          <p>Mantenimiento y soporte t&#233;cnico continuo para tu empresa.</p>
+        </div>
+      </div>
+      <div class="svc-tech-cta reveal">
+        <a href="#contacto" class="btn btn-tech">Conversemos tu proyecto</a>
       </div>
     </div>
   </section>
