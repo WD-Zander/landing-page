@@ -175,7 +175,9 @@
       --accent-amber-border: rgba(245, 158, 11, 0.25);
 
       --brand-blue: #2563eb;
+      --brand-blue-light: #5fa0ff;
       --brand-blue-glow: rgba(37, 99, 235, 0.12);
+      --brand-blue-border: rgba(37, 99, 235, 0.3);
       --brand-slate: #0f172a;
 
       --status-green: #22c55e;
@@ -258,7 +260,7 @@
       font-size: 0.82rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--accent-amber);
+      color: var(--brand-blue-light);
     }
 
     .mono {
@@ -270,7 +272,7 @@
     }
 
     .text-gradient {
-      background: linear-gradient(135deg, var(--accent-amber), #fbbf24);
+      background: linear-gradient(135deg, #2563eb, #5fa0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -458,7 +460,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: var(--accent-amber);
+      background: var(--brand-blue-light);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s;
@@ -595,9 +597,9 @@
       align-items: center;
       gap: 8px;
       padding: 6px 16px;
-      border: 1px solid var(--accent-amber-border);
+      border: 1px solid var(--brand-blue-border);
       border-radius: 999px;
-      background: var(--accent-amber-glow);
+      background: var(--brand-blue-glow);
       margin-bottom: 20px;
     }
 
@@ -605,7 +607,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--accent-amber);
+      background: var(--brand-blue-light);
       animation: pulse-glow 2s infinite;
     }
 
@@ -1970,13 +1972,13 @@
     }
 
     .plan-card:hover {
-      border-color: var(--accent-amber-border);
+      border-color: var(--brand-blue-border);
       transform: translateY(-3px);
     }
 
     .plan-card.featured {
-      border-color: var(--accent-amber-border);
-      box-shadow: 0 0 30px rgba(245, 158, 11, 0.10);
+      border-color: var(--brand-blue-border);
+      box-shadow: 0 0 30px rgba(37, 99, 235, 0.14);
     }
 
     .plan-eyebrow {
@@ -1984,7 +1986,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent-amber);
+      color: var(--brand-blue-light);
       margin-bottom: 8px;
     }
 
@@ -2036,7 +2038,7 @@
       font-family: var(--font-heading);
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--accent-amber);
+      color: var(--brand-blue-light);
       margin-bottom: 4px;
     }
 
