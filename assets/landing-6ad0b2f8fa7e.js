@@ -236,6 +236,13 @@
   // Keep the native POST as a no-JavaScript fallback. Confirm success only from
   // FormSubmit's JSON response; errors preserve the visitor's input for retry.
   const form = document.querySelector("#contactForm");
+  if ("IntersectionObserver" in window) {
+    const callbackLink = document.querySelector(".whatsapp-float");
+    const contactVisibility = new IntersectionObserver(([entry]) => {
+      callbackLink.hidden = entry.isIntersecting;
+    });
+    contactVisibility.observe(form);
+  }
   const phone = form.elements.telefono;
   phone.addEventListener("input", () => {
     const normalized = phone.value.replace(/[\s().-]/g, "");
