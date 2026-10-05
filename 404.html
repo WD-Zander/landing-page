@@ -1,197 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Página no encontrada | ASSET</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: #0a0a0f;
-      color: #f0f0f5;
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      overflow: hidden;
-    }
-
-    .glow {
-      position: fixed;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      opacity: 0.08;
-    }
-    .glow-amber { background: #5fa0ff; top: -200px; right: -100px; }
-    .glow-blue  { background: #2563eb; bottom: -200px; left: -100px; }
-
-    .card {
-      position: relative;
-      text-align: center;
-      max-width: 520px;
-      width: 100%;
-      background: #111118;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 20px;
-      padding: 56px 40px 48px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      background: rgba(37,99,235,0.1);
-      border: 1px solid rgba(37,99,235,0.3);
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #5fa0ff;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-    }
-
-    .code {
-      font-size: clamp(80px, 18vw, 120px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -4px;
-      background: linear-gradient(135deg, #f0f0f5 30%, #5a5a72);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 8px;
-    }
-
-    h1 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #f0f0f5;
-      margin-bottom: 12px;
-    }
-
-    p {
-      font-size: 15px;
-      color: #a0a0b4;
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
-
-    .actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .btn-primary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0 0 25px rgba(37, 99, 235, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: all 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-      box-shadow: 0 0 35px rgba(37, 99, 235, 0.45), 0 6px 16px rgba(0, 0, 0, 0.4);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 28px;
-      background: transparent;
-      color: #a0a0b4;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 500;
-      font-size: 15px;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, transform 0.15s;
-    }
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.2);
-      color: #f0f0f5;
-      transform: translateY(-1px);
-    }
-
-    .logo {
-      position: absolute;
-      top: 24px;
-      left: 28px;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .logo img {
-      height: 22px;
-      width: auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div class="glow glow-amber"></div>
-  <div class="glow glow-blue"></div>
-
-  <div class="card">
-    <a href="/" class="logo">
-      <img src="/assets/asset-logo-horizontal-blanco.svg" alt="ASSET">
-    </a>
-
-    <div class="badge">
-      <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-      </svg>
-      Error 404
-    </div>
-
-    <div class="code">404</div>
-    <h1>Página no encontrada</h1>
-    <p>La URL que buscas no existe o fue movida.<br>Regresa al inicio para continuar.</p>
-
-    <div class="actions">
-      <a href="/" class="btn-primary">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M3 12L12 3l9 9"/><path d="M9 21V12h6v9"/>
-        </svg>
-        Volver al inicio
-      </a>
-      <a href="/#contacto" class="btn-secondary">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-        Solicitar Demo
-      </a>
-    </div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>404 — Página no encontrada | ASSET</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;750&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background: #f5f8fd;
+        color: #172337;
+        font-family: Manrope, sans-serif;
+        display: grid;
+        place-items: center;
+        padding: 25px;
+      }
+      main {
+        max-width: 530px;
+        width: 100%;
+        padding: 48px 36px;
+        background: #fff;
+        border: 1px solid #dfe7f3;
+        border-radius: 16px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        width: 120px;
+        height: auto;
+        margin: 0 auto 34px;
+      }
+      .code {
+        font-size: 100px;
+        letter-spacing: -6px;
+        font-weight: 750;
+        line-height: 1;
+        color: #2563eb;
+        margin: 0;
+      }
+      h1 {
+        font-size: 25px;
+        letter-spacing: -1px;
+        margin: 22px 0 16px;
+      }
+      p {
+        color: #647184;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      a {
+        display: inline-flex;
+        padding: 14px 22px;
+        min-height: 48px;
+        align-items: center;
+        margin-top: 22px;
+        border-radius: 7px;
+        background: #2563eb;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      a:hover {
+        background: #1c4fca;
+      }
+      a:focus-visible {
+        outline: 3px solid #2563eb;
+        outline-offset: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img
+        src="/assets/asset-logo-horizontal-color.svg"
+        alt="ASSET"
+        width="120"
+        height="30"
+      />
+      <p class="code">404</p>
+      <h1>Esta página no está aquí.</h1>
+      <p>
+        El enlace puede haber cambiado. Vuelve al inicio para conocer la
+        plataforma y encontrar lo que buscas.
+      </p>
+      <a href="/">Volver al inicio ↗</a>
+    </main>
+  </body>
 </html>
