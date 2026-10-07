@@ -50,14 +50,28 @@ Vista y comportamiento a 320, 390, 768, 1024 y 1440 píxeles; navegación móvil
 
 Fuente comercial: `docs/PAQUETES_COMERCIALES.md` de la aplicación (revisión 2026-09-22). Funciones contrastadas con documentos de módulos, especificaciones, bitácora, código y commits de main. La aplicación publicada identificó la revisión `095916e7854f86528fd1bfe277d04c7f382a6aec`, coincidente con main remoto.
 
-Seguridad y Operaciones se ofrece con el alcance de lecturas manuales, activación por empresa y precio por cotizar; este complemento todavía no está incorporado a la tabla del documento comercial. Panel en Vivo conserva precio por definir. No se anuncian rondas, bitácoras operativas, la maqueta de asignaciones, un enlace automático de sensores a medidores de mantenimiento, una app de tienda ni una integración contable lista para usar. Las cifras de la demo siguen siendo ilustrativas.
+Seguridad y Operaciones se ofrece con el alcance de lecturas manuales, activación por empresa y contratación independiente; este complemento todavía no está incorporado a la tabla del documento comercial. Panel en Vivo se presenta como complemento independiente. No se anuncian rondas, bitácoras operativas, la maqueta de asignaciones, un enlace automático de sensores a medidores de mantenimiento, una app de tienda ni una integración contable lista para usar. Las cifras de la demo siguen siendo ilustrativas.
 
 Se corrigieron también los metadatos, preguntas frecuentes, imagen al compartir y opciones del formulario. El formulario conserva la solicitud de contacto por WhatsApp y el destinatario existente.
 
 ## Refinamiento visual y comercial — 2026-10-06
 
-Por instrucción del propietario, Esencial se anuncia a $105/mes. Se retiraron las aclaraciones de pago en bolívares y el precio de implantación del contenido público y de las preguntas frecuentes estructuradas. Esta instrucción comercial actualiza el precio anterior del documento de paquetes; no modifica la aplicación.
+Se retiraron las aclaraciones de pago en bolívares y de implantación del contenido público y de las preguntas frecuentes estructuradas. La política comercial de la landing se define por las instrucciones del propietario; no modifica la aplicación.
 
 Las vistas de módulos y complementos son ilustrativas, con datos de ejemplo. Los cuatro módulos se muestran completos sin JavaScript; con JavaScript ofrecen selección mediante clic, flechas, Inicio/Fin y enlaces directos. Las funciones detalladas permanecen disponibles en desplegables.
 
 La API de lectura y los webhooks están incluidos en los planes; conectores, configuración e integraciones específicas se cotizan por alcance. No se anuncian conectores de marcas no verificados. Cada complemento y la sección de integraciones preseleccionan el interés en el formulario, además de conservar el origen de la solicitud.
+
+## Formulario de contacto — 2026-10-07
+
+Nueva presentación con datos esenciales destacados, información opcional desplegable y contexto del contacto. Las solicitudes desde planes, complementos e integraciones conservan y muestran su selección. Validación en español junto a cada campo, navegación con teclado, estados de envío visibles y recuperación ante errores sin borrar lo escrito. Sin JavaScript, los campos opcionales se muestran abiertos y se conserva el envío nativo a FormSubmit.
+
+Se realizó una única solicitud real con datos ficticios autorizada por el propietario: FormSubmit respondió correctamente y se confirmó la recepción en la bandeja de entrada, con teléfono y enlace de contacto. Los escenarios posteriores del rediseño se verifican con respuestas simuladas para no generar más correos. El sistema continúa enviando solicitudes por correo; no inicia mensajes de WhatsApp automáticamente.
+
+## Navegación, planes y conexiones — 2026-10-07
+
+Por indicación del propietario, ningún plan muestra precios, incluido Esencial. Tampoco se publican importes ni porcentajes de complementos o extras. Se conservan capacidades, diferencias entre planes y el alcance de los complementos.
+
+Los enlaces internos desplazan al destino sin añadir fragmentos a la URL. Se preservan la ruta y los parámetros de consulta. Los enlaces antiguos con fragmento siguen llevando a su sección y después limpian la dirección. Las pestañas de módulos, el foco de teclado y las solicitudes de contacto siguen funcionando; sin JavaScript se conservan los enlaces nativos.
+
+El mapa de integraciones muestra una fuente ASSET y tres destinos con flechas alineadas. En móvil se organiza verticalmente. Los destinos son posibilidades mediante conexiones a medida, no conectores ya incluidos.
