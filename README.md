@@ -1,6 +1,6 @@
 # ASSET — Sitio oficial
 
-Landing estática de ASSET, con HTML, CSS y JavaScript sin dependencias de ejecución ni paso de compilación. Conserva el dominio, la configuración de Vercel, la verificación de Google, los iconos, el manifiesto y el acceso a la aplicación.
+Landing de ASSET con HTML, CSS y JavaScript, más una función de contacto en Vercel. No requiere paquetes adicionales ni paso de compilación para el contenido. Conserva el dominio, la configuración de Vercel, la verificación de Google, los iconos, el manifiesto y el acceso a la aplicación.
 
 ## Desarrollo local
 
@@ -10,7 +10,7 @@ Desde esta carpeta, con Python disponible:
 python -m http.server 5174 --bind 127.0.0.1
 ```
 
-Abrir `http://127.0.0.1:5174/`. El recurso `/_vercel/insights/script.js` es provisto por Vercel en producción; un servidor estático local puede responder 404 a ese recurso de analítica.
+Abrir `http://127.0.0.1:5174/` para revisar la interfaz. Para probar el envío mediante `/api/contact`, usar `vercel dev` (puerto 3000); Python solo sirve los archivos estáticos. El recurso `/_vercel/insights/script.js` es provisto por Vercel en producción; un servidor estático local puede responder 404 a ese recurso de analítica.
 
 ## Contenido
 
@@ -26,7 +26,7 @@ Los datos de la demo son ficticios y no se conectan con la aplicación ni con cl
 
 ## Contacto
 
-El formulario conserva el destinatario original de FormSubmit y el honeypot. Los botones que antes abrían WhatsApp llevan a una solicitud de contacto. El visitante deja nombre y WhatsApp con código de país, y autoriza que ASSET lo contacte; empresa, correo, plan y consulta son opcionales. Al entrar desde un plan, este se selecciona automáticamente. La solicitud enviada por correo incluye los datos, el origen y un enlace para que el equipo inicie la conversación con el visitante. JavaScript utiliza el endpoint AJAX documentado para confirmar el resultado del servicio. Solo muestra éxito si la respuesta HTTP y `success` lo confirman; ante errores conserva los datos y permite reintentar. Sin JavaScript mantiene el POST nativo. No se abre ni se envía un mensaje por WhatsApp al enviar la solicitud. No se capturan datos automáticamente desde WhatsApp ni se guardan datos personales en el navegador. El enlace de acceso a la aplicación se conserva.
+El formulario conserva el destinatario original de FormSubmit y el honeypot. Los botones que antes abrían WhatsApp llevan a una solicitud de contacto. El visitante deja nombre y WhatsApp con código de país, y autoriza que ASSET lo contacte; empresa, correo, plan y consulta son opcionales. Al entrar desde un plan, este se selecciona automáticamente. La solicitud enviada por correo incluye los datos, el origen y un enlace para que el equipo inicie la conversación con el visitante. El navegador envía a `/api/contact` en el mismo dominio. Esta función de Vercel valida la solicitud y consulta el endpoint AJAX documentado de FormSubmit desde el servidor. Solo muestra éxito si la respuesta HTTP y `success` lo confirman; ante errores conserva los datos y permite reintentar. Sin JavaScript, el POST nativo usa la misma función y devuelve una página de confirmación o un aviso con posibilidad de reintentar. No se abre ni se envía un mensaje por WhatsApp al enviar la solicitud. No se capturan datos automáticamente desde WhatsApp ni se guardan datos personales en el navegador. El enlace de acceso a la aplicación se conserva.
 
 Documentación del proveedor: https://formsubmit.co/documentation
 
@@ -38,7 +38,9 @@ Las verificaciones del rediseño simulan las respuestas de FormSubmit: no envía
 - `assets/landing-*.css` y `assets/landing-*.js`: diseño e interacciones. El nombre incluye una huella del contenido porque Vercel conserva `/assets/` en caché durante un año.
 - `assets/asset-logo-horizontal-color.svg` y `assets/asset-isotipo-color.svg`: vectores originales de la marca.
 - `404.html`: página de error alineada con el diseño.
-- `vercel.json`: configuración original de alojamiento.
+- `api/contact.js`: recepción y validación del formulario, entrega a FormSubmit y respuesta JSON o HTML.
+- `tests/contact.test.cjs`: pruebas de entrega simulada y validación; ejecutar `node --test tests/contact.test.cjs`. No envían correos.
+- `vercel.json`: encabezados de alojamiento y límite de ejecución de la función de contacto.
 
 Al modificar CSS o JavaScript, generar un nuevo nombre con su huella y actualizar la referencia en `index.html` para evitar que los visitantes conserven una versión anterior en caché.
 
@@ -75,3 +77,9 @@ Por indicación del propietario, ningún plan muestra precios, incluido Esencial
 Los enlaces internos desplazan al destino sin añadir fragmentos a la URL. Se preservan la ruta y los parámetros de consulta. Los enlaces antiguos con fragmento siguen llevando a su sección y después limpian la dirección. Las pestañas de módulos, el foco de teclado y las solicitudes de contacto siguen funcionando; sin JavaScript se conservan los enlaces nativos.
 
 El mapa de integraciones muestra una fuente ASSET y tres destinos con flechas alineadas. En móvil se organiza verticalmente. Los destinos son posibilidades mediante conexiones a medida, no conectores ya incluidos.
+
+## Corrección del envío — 2026-10-07
+
+Se observó un fallo de resolución DNS de FormSubmit desde la conexión de prueba, aunque dos resolvedores públicos sí devolvían sus direcciones. El navegador ya no se conecta directamente a ese dominio: envía al mismo dominio de la landing y Vercel realiza la entrega al proveedor. Se conserva el destinatario original. El cambio elimina esa dependencia de la red del visitante, pero sigue necesitando que FormSubmit esté disponible desde Vercel.
+
+La función solo acepta campos permitidos, valida nombre, teléfono, correo y consentimiento, conserva el honeypot, limita el tamaño de la solicitud y no permite cambiar destinatarios ni controles de FormSubmit. No registra datos personales. Solo confirma éxito cuando el proveedor lo confirma. Los errores y las demoras conservan lo escrito, sin reenvíos automáticos; no se cambian los DNS del equipo.

@@ -1,0 +1,7 @@
+{
+  "name": "asset-landing",
+  "private": true,
+  "type": "commonjs",
+  "engines": { "node": "22.x" },
+  "scripts": { "test": "node --test tests/contact.test.cjs" }
+}
