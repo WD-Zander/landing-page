@@ -15,7 +15,10 @@ Abrir `http://127.0.0.1:5174/`. El recurso `/_vercel/insights/script.js` es prov
 ## Contenido
 
 - Presentación de la plataforma y demo ilustrativa interactiva.
-- 24 módulos agrupados, planes Pymes / Empresarial / Corporativo y sus alcances originales.
+- Recorrido visual de cuatro áreas del núcleo, con pestañas accesibles y funciones ampliables: activos, mantenimiento, compras y reportes.
+- Complementos destacados con vistas ilustrativas: Panel en Vivo, Ama de Llaves y lecturas de Seguridad y Operaciones.
+- Sección de API e integraciones con alcance de lectura, webhooks y conexiones a medida.
+- Planes Esencial / Profesional / Empresarial; núcleo incluido y complementos separados.
 - Diez servicios tecnológicos complementarios.
 - Preguntas frecuentes, formulario de solicitud de contacto y acceso a la aplicación.
 
@@ -42,3 +45,19 @@ Al modificar CSS o JavaScript, generar un nuevo nombre con su huella y actualiza
 ## Verificaciones realizadas
 
 Vista y comportamiento a 320, 390, 768, 1024 y 1440 píxeles; navegación móvil; pestañas con teclado; búsqueda; tareas y restablecimiento de demo; detalles de planes; formulario obligatorio y estados de envío; enlaces internos y datos estructurados. El contenido y el formulario siguen disponibles con JavaScript desactivado.
+
+## Contenido verificado — 2026-10-06
+
+Fuente comercial: `docs/PAQUETES_COMERCIALES.md` de la aplicación (revisión 2026-09-22). Funciones contrastadas con documentos de módulos, especificaciones, bitácora, código y commits de main. La aplicación publicada identificó la revisión `095916e7854f86528fd1bfe277d04c7f382a6aec`, coincidente con main remoto.
+
+Seguridad y Operaciones se ofrece con el alcance de lecturas manuales, activación por empresa y precio por cotizar; este complemento todavía no está incorporado a la tabla del documento comercial. Panel en Vivo conserva precio por definir. No se anuncian rondas, bitácoras operativas, la maqueta de asignaciones, un enlace automático de sensores a medidores de mantenimiento, una app de tienda ni una integración contable lista para usar. Las cifras de la demo siguen siendo ilustrativas.
+
+Se corrigieron también los metadatos, preguntas frecuentes, imagen al compartir y opciones del formulario. El formulario conserva la solicitud de contacto por WhatsApp y el destinatario existente.
+
+## Refinamiento visual y comercial — 2026-10-06
+
+Por instrucción del propietario, Esencial se anuncia a $105/mes. Se retiraron las aclaraciones de pago en bolívares y el precio de implantación del contenido público y de las preguntas frecuentes estructuradas. Esta instrucción comercial actualiza el precio anterior del documento de paquetes; no modifica la aplicación.
+
+Las vistas de módulos y complementos son ilustrativas, con datos de ejemplo. Los cuatro módulos se muestran completos sin JavaScript; con JavaScript ofrecen selección mediante clic, flechas, Inicio/Fin y enlaces directos. Las funciones detalladas permanecen disponibles en desplegables.
+
+La API de lectura y los webhooks están incluidos en los planes; conectores, configuración e integraciones específicas se cotizan por alcance. No se anuncian conectores de marcas no verificados. Cada complemento y la sección de integraciones preseleccionan el interés en el formulario, además de conservar el origen de la solicitud.
