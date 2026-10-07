@@ -46,8 +46,24 @@ test('rejects invalid input before contacting the provider', async()=>{
   assert.equal((await invoke({headers:{'content-type':'text/plain'}})).statusCode,415);
   const get=await invoke({method:'GET'});
   assert.equal(get.statusCode,405);
-  assert.equal(get.headers.Allow,'POST');
+  assert.equal(get.headers.Allow,'POST, HEAD');
   assert.equal(requests,0);
+});
+
+test('HEAD diagnoses provider availability without sending a lead', async()=>{
+  global.fetch=async(url,options)=>{
+    assert.equal(options.method,'OPTIONS');
+    assert.equal(options.body,undefined);
+    return new Response('',{status:200});
+  };
+  const ready=await invoke({method:'HEAD'});
+  assert.equal(ready.statusCode,200);
+  assert.equal(ready.headers['X-ASSET-Provider-Status'],'200');
+  global.fetch=async()=>{throw new TypeError('fetch failed',{cause:{code:'ENOTFOUND'}});};
+  const failed=await invoke({method:'HEAD'});
+  assert.equal(failed.statusCode,503);
+  assert.equal(failed.headers['X-ASSET-Provider-Error'],'ENOTFOUND');
+  assert.equal(failed.body,'');
 });
 
 test('distinguishes rejection, HTTP failure, throttling, DNS failure and bad responses without retrying', async()=>{

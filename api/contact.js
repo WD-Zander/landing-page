@@ -44,8 +44,27 @@ function reply(req, res, status, code, fields = {}) {
 }
 
 module.exports = async function contact(req, res) {
+  // Read-only diagnostics: check provider connectivity without submitting a lead.
+  if (req.method === "HEAD") {
+    res.setHeader("Cache-Control", "no-store");
+    try {
+      const response = await fetch(PROVIDER, {
+        method: "OPTIONS",
+        headers: { Origin: SITE, "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "content-type" },
+        redirect: "manual", signal: AbortSignal.timeout(8000),
+      });
+      res.setHeader("X-ASSET-Provider-Status", String(response.status));
+      res.setHeader("X-ASSET-Delivery", response.ok ? "reachable" : "unavailable");
+      return res.status(response.ok ? 200 : 503).send("");
+    } catch (error) {
+      const code = error.cause?.code;
+      res.setHeader("X-ASSET-Delivery", "unavailable");
+      res.setHeader("X-ASSET-Provider-Error", ["ENOTFOUND", "EAI_AGAIN", "ECONNRESET", "ECONNREFUSED", "ETIMEDOUT"].includes(code) ? code : error.name === "TimeoutError" ? "ETIMEDOUT" : "NETWORK_ERROR");
+      return res.status(503).send("");
+    }
+  }
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader("Allow", "POST, HEAD");
     return reply(req, res, 405, "method_not_allowed");
   }
   const allowedOrigins = new Set([SITE, "https://www.getsmcaf.com"]);
