@@ -83,3 +83,7 @@ El mapa de integraciones muestra una fuente ASSET y tres destinos con flechas al
 Se observó un fallo de resolución DNS de FormSubmit desde la conexión de prueba, aunque dos resolvedores públicos sí devolvían sus direcciones. El navegador ya no se conecta directamente a ese dominio: envía al mismo dominio de la landing y Vercel realiza la entrega al proveedor. Se conserva el destinatario original. El cambio elimina esa dependencia de la red del visitante, pero sigue necesitando que FormSubmit esté disponible desde Vercel.
 
 La función solo acepta campos permitidos, valida nombre, teléfono, correo y consentimiento, conserva el honeypot, limita el tamaño de la solicitud y no permite cambiar destinatarios ni controles de FormSubmit. No registra datos personales. Solo confirma éxito cuando el proveedor lo confirma. Los errores y las demoras conservan lo escrito, sin reenvíos automáticos; no se cambian los DNS del equipo.
+
+## Enfoque empresarial — 2026-10-08
+
+La presentación general de ASSET se dirige a empresas. Se unificaron la portada, las preguntas frecuentes visibles y estructuradas, el ejemplo del formulario y la imagen al compartir. La fila de sectores incluye Comercio. La hostelería se conserva como un complemento opcional, sin definir el enfoque general del producto. Las funciones de Panel en Vivo, API e integraciones mantienen su presencia.

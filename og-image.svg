@@ -69,7 +69,7 @@
 
   <!-- Subtext -->
   <text x="80" y="395" font-family="system-ui, sans-serif" font-weight="400" font-size="22" fill="#52667f">Activos, mantenimiento, compras y presupuesto.</text>
-  <text x="80" y="423" font-family="system-ui, sans-serif" font-weight="400" font-size="22" fill="#52667f">Para hoteles y empresas que necesitan claridad.</text>
+  <text x="80" y="423" font-family="system-ui, sans-serif" font-weight="400" font-size="22" fill="#52667f">Para empresas que necesitan claridad.</text>
 
   <!-- KPI pills -->
   <rect x="80" y="475" width="180" height="44" rx="8" fill="rgba(37,99,235,0.1)" stroke="rgba(37,99,235,0.25)" stroke-width="1"/>
