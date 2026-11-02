@@ -87,3 +87,9 @@ La función solo acepta campos permitidos, valida nombre, teléfono, correo y co
 ## Enfoque empresarial — 2026-10-08
 
 La presentación general de ASSET se dirige a empresas. Se unificaron la portada, las preguntas frecuentes visibles y estructuradas, el ejemplo del formulario y la imagen al compartir. La fila de sectores incluye Comercio. La hostelería se conserva como un complemento opcional, sin definir el enfoque general del producto. Las funciones de Panel en Vivo, API e integraciones mantienen su presencia.
+
+## Asistente ASSET — 2026-11-02
+
+Sección destacada `#asistente`, entre funcionalidades y complementos, con chat ilustrativo en HTML/CSS. El ejemplo permanece completo sin JavaScript y no realiza conexiones ni animaciones. Incluye aviso en el hero, navegación compartida PC/móvil, tarjeta de complemento, condiciones de planes, interés en el formulario y cinco preguntas frecuentes visibles y en JSON-LD. Es un complemento de solo lectura con cupo mensual; se explica el envío de información necesaria a un proveedor externo de inteligencia artificial.
+
+El CSS utiliza SHA-256 (primeros 12 caracteres) de sus bytes UTF-8 como huella en el nombre. No se modificó JavaScript ni la función de contacto.

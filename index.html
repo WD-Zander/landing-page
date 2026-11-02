@@ -86,84 +86,124 @@
 
     <!-- Structured Data: FAQPage (rich results en Google) -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Qué es ASSET?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Es una plataforma en la nube para empresas que necesitan controlar sus activos, organizar el mantenimiento, gestionar compras y decidir con reportes. El núcleo está incluido en todos los planes; los complementos se contratan según tu operación."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué incluyen los planes y qué se contrata aparte?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Esencial, Profesional y Empresarial incluyen activos, mantenimiento, compras, almacenes, reportes, presupuesto, bajas, vencimientos, notificaciones, acceso móvil, API de lectura y webhooks. Cambian los límites de activos y usuarios de gestión. Ama de Llaves, Panel en Vivo y Seguridad y Operaciones son complementos. Las integraciones específicas se cotizan aparte."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Puedo usarlo desde el celular y sin señal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí, desde el navegador del teléfono. Puedes dejar pendientes de envío las lecturas de medidor, el avance de tareas y los escaneos de una toma física abierta. Con los complementos correspondientes, también los estados de habitación y las lecturas operativas. Aprobar, pagar, importar y abrir o cerrar un conteo requieren conexión."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Puedo importar mi inventario de Excel?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí. El importador de activos permite revisar hasta 2.000 filas por lote antes de confirmar, consultar avisos y crear los catálogos necesarios. Puedes deshacer un lote mientras sus activos no tengan registros asociados. La importación de repuestos y suministros no forma parte de este asistente."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo se cuida el acceso a la información?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cada empresa trabaja con su información y define permisos por rol. ASSET dispone de acceso con Google y verificación en dos pasos, según la configuración de la cuenta. Las notificaciones dentro de la aplicación ayudan a cada responsable a conocer sus pendientes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué incluye la puesta en marcha?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Te acompañamos con la configuración, la carga inicial acordada, los roles y la capacitación de arranque. El alcance de la puesta en marcha se define según tu operación. La suscripción incluye alojamiento, actualizaciones y respaldos diarios. La migración adicional, los desarrollos a medida, el soporte fuera de horario y los equipos de telemetría se cotizan aparte."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué puedo explorar en esta demo?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Es una vista ilustrativa con datos ficticios: puedes buscar equipos de ejemplo y marcar tareas. No está conectada a una empresa real. Para conocer los flujos disponibles y los complementos de tu operación, solicita una demostración personalizada."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Quién inicia el contacto?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nosotros. Deja tu nombre, WhatsApp y consulta, y autoriza que ASSET te contacte. Puedes indicar el plan que te interesa o pedir orientación; no necesitas escribirnos primero."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué puedo conectar con la API?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "La API permite consultar activos, mantenimientos y facturas desde otros sistemas, con acceso de solo lectura. Los webhooks envían avisos de los eventos disponibles. Ambos están incluidos en los planes; la configuración de conexiones y los conectores específicos se cotizan según el alcance. No se incluye un conector contable listo para usar."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es ASSET?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una plataforma en la nube para empresas que necesitan controlar sus activos, organizar el mantenimiento, gestionar compras y decidir con reportes. El núcleo está incluido en todos los planes; los complementos se contratan según tu operación."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluyen los planes y qué se contrata aparte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esencial, Profesional y Empresarial incluyen activos, mantenimiento, compras, almacenes, reportes, presupuesto, bajas, vencimientos, notificaciones, acceso móvil, API de lectura y webhooks. Cambian los límites de activos y usuarios de gestión. Asistente ASSET, Ama de Llaves, Panel en Vivo y Seguridad y Operaciones son complementos. Las integraciones específicas se cotizan aparte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo usarlo desde el celular y sin señal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, desde el navegador del teléfono. Puedes dejar pendientes de envío las lecturas de medidor, el avance de tareas y los escaneos de una toma física abierta. Con los complementos correspondientes, también los estados de habitación y las lecturas operativas. Aprobar, pagar, importar y abrir o cerrar un conteo requieren conexión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo importar mi inventario de Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El importador de activos permite revisar hasta 2.000 filas por lote antes de confirmar, consultar avisos y crear los catálogos necesarios. Puedes deshacer un lote mientras sus activos no tengan registros asociados. La importación de repuestos y suministros no forma parte de este importador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se cuida el acceso a la información?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada empresa trabaja con su información y define permisos por rol. ASSET dispone de acceso con Google y verificación en dos pasos, según la configuración de la cuenta. Las notificaciones dentro de la aplicación ayudan a cada responsable a conocer sus pendientes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye la puesta en marcha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Te acompañamos con la configuración, la carga inicial acordada, los roles y la capacitación de arranque. El alcance de la puesta en marcha se define según tu operación. La suscripción incluye alojamiento, actualizaciones y respaldos diarios. La migración adicional, los desarrollos a medida, el soporte fuera de horario y los equipos de telemetría se cotizan aparte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué puedo explorar en esta demo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una vista ilustrativa con datos ficticios: puedes buscar equipos de ejemplo y marcar tareas. No está conectada a una empresa real. Para conocer los flujos disponibles y los complementos de tu operación, solicita una demostración personalizada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién inicia el contacto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nosotros. Deja tu nombre, WhatsApp y consulta, y autoriza que ASSET te contacte. Puedes indicar el plan que te interesa o pedir orientación; no necesitas escribirnos primero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué puedo conectar con la API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La API permite consultar activos, mantenimientos y facturas desde otros sistemas, con acceso de solo lectura. Los webhooks envían avisos de los eventos disponibles. Ambos están incluidos en los planes; la configuración de conexiones y los conectores específicos se cotizan según el alcance. No se incluye un conector contable listo para usar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué puedo preguntarle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo que necesites saber de tu operación: inventarios, compras y facturas, mantenimiento, sensores, rondas, bitácoras, hostelería, personal y presupuesto. Respeta lo que tu rol tiene permitido ver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede cambiar o borrar información?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Solo consulta. Cualquier cambio lo sigue haciendo tu equipo en ASSET."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa con mis datos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para responder, el asistente envía a un proveedor externo de inteligencia artificial la información necesaria para esa pregunta. Solo trabaja con los datos de tu empresa y no tiene acceso a claves ni a correos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Siempre acierta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede equivocarse. Por eso muestra los registros de donde salió la respuesta, para que puedas comprobarlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se contrata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un complemento con un cupo mensual de uso. Se cotiza a la medida después de la demo."
+      }
+    }
+  ]
+}
     </script>
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -187,7 +227,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/landing-3f863306cb71.css" />
+    <link rel="stylesheet" href="/assets/landing-0b76eea6fed0.css" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -207,7 +247,7 @@
           aria-label="Navegación principal"
           class="main-nav"
         >
-          <a href="#funcionalidades">La plataforma</a
+          <a href="#funcionalidades">La plataforma</a><a href="#asistente">Asistente</a
           ><a href="#ecosistema">Complementos</a
           ><a href="#integraciones">Integraciones</a><a href="#planes">Planes</a
           ><a href="#servicios">Servicios</a
@@ -315,6 +355,7 @@
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="container hero-layout">
           <div class="hero-copy">
+            <a class="assistant-announcement" href="#asistente">Nuevo: Asistente ASSET <span aria-hidden="true">↗</span></a>
             <div class="hero-eyebrow">
               <span class="eyebrow-dot"></span> ACTIVOS. MANTENIMIENTO. CONTROL.
             </div>
@@ -1984,6 +2025,52 @@
           ></a>
         </div>
       </section>
+      <section class="assistant-section section-space" id="asistente" aria-labelledby="assistant-title">
+        <div class="container">
+          <div class="assistant-layout">
+            <div class="assistant-copy">
+              <span class="eyebrow">NUEVO · ASISTENTE ASSET</span>
+              <h2 id="assistant-title">Pregúntale a tu operación.<br /><span>Te responde con tus datos.</span></h2>
+              <p class="assistant-intro">Escribe lo que necesitas saber, con tus palabras. El Asistente ASSET busca en tus registros, cruza la información y te muestra de dónde salió cada respuesta.</p>
+              <p class="assistant-scope">Un chat con inteligencia artificial dentro de ASSET. Es un complemento: no forma parte del núcleo.</p>
+              <ul class="assistant-benefits">
+                <li><strong>Entiende cómo preguntas.</strong> No necesitas saber el código ni en qué pantalla está el dato.</li>
+                <li><strong>Investiga el porqué.</strong> Revisa el historial para explicar por qué un dato está así, incluso si algo se borró.</li>
+                <li><strong>Te muestra la fuente.</strong> Abres el registro con un clic y lo compruebas tú.</li>
+              </ul>
+              <a href="#contacto" class="button button-primary" data-request-contact="Complemento Asistente ASSET" data-interest="Asistente ASSET">Solicitar una demo <span aria-hidden="true">↗</span></a>
+              <p class="assistant-readonly">Solo consulta. No crea, cambia ni borra nada.</p>
+            </div>
+            <figure class="assistant-figure">
+              <div class="assistant-chat">
+                <div class="assistant-chat-header"><img src="/assets/asset-isotipo-color.svg" width="32" height="32" alt="" /><div><strong>Asistente ASSET</strong><span>Tu operación, en tus palabras</span></div><span class="assistant-example-label">Ejemplo</span></div>
+                <div class="assistant-conversation">
+                  <div class="assistant-question"><span class="sr-only">Pregunta:</span>¿Por qué subió el costo del papel bond carta?</div>
+                  <div class="assistant-answer">
+                    <p class="assistant-answer-label">ASISTENTE ASSET</p>
+                    <p>El costo subió porque se borró una recepción de abril.<br />Sin ella, el promedio se calcula solo con la compra de mayo, que fue más cara.</p>
+                    <table class="assistant-table">
+                      <caption class="sr-only">Recepciones de papel bond carta que explican el cambio de costo</caption>
+                      <thead><tr><th scope="col">Recepción</th><th scope="col">Cantidad</th><th scope="col">Costo por unidad</th><th scope="col">Estado</th></tr></thead>
+                      <tbody><tr><th scope="row">Abril</th><td>200 resmas</td><td>3,20 USD</td><td>Borrada</td></tr><tr><th scope="row">Mayo</th><td>100 resmas</td><td>4,40 USD</td><td>Vigente</td></tr></tbody>
+                    </table>
+                    <p class="assistant-result">Costo promedio: pasó de <strong>3,60 USD</strong> a <strong>4,40 USD.</strong></p>
+                    <p>Si la recepción se borró por error, conviene revisarla con Compras.</p>
+                    <div class="assistant-sources"><span>Registros:</span><span>Papel bond carta · SUM-0042</span><span>Orden de compra · OC-0087</span></div>
+                  </div>
+                  <p class="assistant-disclaimer">El asistente puede equivocarse. Verifica los datos importantes.</p>
+                </div>
+              </div>
+              <figcaption>Vista ilustrativa · Datos de ejemplo</figcaption>
+            </figure>
+          </div>
+          <div class="assistant-explore">
+            <div><h3>Qué puede consultar</h3><p>Inventarios, compras y facturas, mantenimiento, sensores, rondas, bitácoras, hostelería, personal y presupuesto.</p></div>
+            <div><h3>Empieza con una pregunta</h3><ul class="assistant-prompts"><li>¿Cuál fue la última factura que registramos?</li><li>¿Qué equipos tienen el mantenimiento vencido?</li><li>¿Qué compras faltan por recibir?</li><li>¿Qué novedades quedaron ayer en la bitácora?</li></ul></div>
+          </div>
+          <ul class="assistant-trust"><li>Solo ve los datos de tu empresa.</li><li>Respeta lo que cada rol tiene permitido ver.</li><li>No tiene acceso a claves ni a correos.</li></ul>
+        </div>
+      </section>
       <section
         class="visual-addons section-space"
         id="ecosistema"
@@ -2003,6 +2090,11 @@
             </p>
           </div>
           <div class="visual-addon-grid">
+            <article class="assistant-addon-card">
+              <div><span class="eyebrow">NUEVO · COMPLEMENTO</span><h3>Asistente ASSET</h3></div>
+              <p>Pregunta con tus palabras y encuentra respuestas con los registros de tu empresa.</p>
+              <a class="addon-link" href="#asistente">Conoce el Asistente <span aria-hidden="true">↗</span></a>
+            </article>
             <article class="visual-addon live" id="equipos-en-vivo">
               <header>
                 <span class="addon-symbol"
@@ -3127,7 +3219,7 @@
               <details class="plan-detail">
                 <summary>Ver condiciones del plan</summary>
                 <p>
-                  Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
+                  Asistente ASSET, Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
                   contratan aparte y se activan por empresa.
                 </p>
               </details>
@@ -3157,7 +3249,7 @@
               <details class="plan-detail">
                 <summary>Ver condiciones del plan</summary>
                 <p>
-                  Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
+                  Asistente ASSET, Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
                   contratan aparte y se activan por empresa.
                 </p>
               </details>
@@ -3187,7 +3279,7 @@
               <details class="plan-detail">
                 <summary>Ver condiciones del plan</summary>
                 <p>
-                  Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
+                  Asistente ASSET, Ama de Llaves, Panel en Vivo y Seguridad y Operaciones se
                   contratan aparte y se activan por empresa.
                 </p>
               </details>
@@ -3207,6 +3299,7 @@
             <div>
               <h3>Complementos según tu operación</h3>
               <ul>
+                <li><strong>Asistente ASSET:</strong> respuestas con tus registros, con un cupo mensual de uso. Se cotiza a la medida después de la demo.</li>
                 <li>
                   <strong>Ama de Llaves:</strong> coordinación de habitaciones,
                   limpieza y consumibles.
@@ -3540,7 +3633,7 @@
                 mantenimiento, compras, almacenes, reportes, presupuesto, bajas,
                 vencimientos, notificaciones, acceso móvil, API de lectura y
                 webhooks. Cambian los límites de activos y usuarios de gestión.
-                Ama de Llaves, Panel en Vivo y Seguridad y Operaciones son
+                Asistente ASSET, Ama de Llaves, Panel en Vivo y Seguridad y Operaciones son
                 complementos. Las integraciones específicas se cotizan aparte.
               </p>
             </details>
@@ -3570,7 +3663,7 @@
                 por lote antes de confirmar, consultar avisos y crear los
                 catálogos necesarios. Puedes deshacer un lote mientras sus
                 activos no tengan registros asociados. La importación de
-                repuestos y suministros no forma parte de este asistente.
+                repuestos y suministros no forma parte de este importador.
               </p>
             </details>
             <details name="asset-faq">
@@ -3643,6 +3736,12 @@
                 conector contable listo para usar.
               </p>
             </details>
+            <h3 class="assistant-faq-heading">Sobre el Asistente ASSET</h3>
+            <details name="asset-faq"><summary><span class="faq-number">10</span><span>¿Qué puedo preguntarle?</span><span class="faq-toggle" aria-hidden="true">⌄</span></summary><p>Lo que necesites saber de tu operación: inventarios, compras y facturas, mantenimiento, sensores, rondas, bitácoras, hostelería, personal y presupuesto. Respeta lo que tu rol tiene permitido ver.</p></details>
+            <details name="asset-faq"><summary><span class="faq-number">11</span><span>¿Puede cambiar o borrar información?</span><span class="faq-toggle" aria-hidden="true">⌄</span></summary><p>No. Solo consulta. Cualquier cambio lo sigue haciendo tu equipo en ASSET.</p></details>
+            <details name="asset-faq"><summary><span class="faq-number">12</span><span>¿Qué pasa con mis datos?</span><span class="faq-toggle" aria-hidden="true">⌄</span></summary><p>Para responder, el asistente envía a un proveedor externo de inteligencia artificial la información necesaria para esa pregunta. Solo trabaja con los datos de tu empresa y no tiene acceso a claves ni a correos.</p></details>
+            <details name="asset-faq"><summary><span class="faq-number">13</span><span>¿Siempre acierta?</span><span class="faq-toggle" aria-hidden="true">⌄</span></summary><p>Puede equivocarse. Por eso muestra los registros de donde salió la respuesta, para que puedas comprobarlos.</p></details>
+            <details name="asset-faq"><summary><span class="faq-number">14</span><span>¿Cómo se contrata?</span><span class="faq-toggle" aria-hidden="true">⌄</span></summary><p>Es un complemento con un cupo mensual de uso. Se cotiza a la medida después de la demo.</p></details>
           </div>
         </div>
       </section>
@@ -4076,6 +4175,7 @@
                     <option value="La plataforma ASSET">
                       La plataforma ASSET
                     </option>
+                    <option value="Asistente ASSET">Asistente ASSET</option>
                     <option value="Panel en Vivo">Panel en Vivo</option>
                     <option value="Ama de Llaves">Ama de Llaves</option>
                     <option value="Seguridad y Operaciones">
