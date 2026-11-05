@@ -54,6 +54,8 @@ module.exports = async function contact(req, res) {
         redirect: "manual", signal: AbortSignal.timeout(8000),
       });
       res.setHeader("X-ASSET-Provider-Status", String(response.status));
+      res.setHeader("X-ASSET-Provider-Server", (response.headers.get("server") || "").slice(0, 40));
+      res.setHeader("X-ASSET-Provider-Mitigated", (response.headers.get("cf-mitigated") || "none").slice(0, 40));
       res.setHeader("X-ASSET-Delivery", response.ok ? "reachable" : "unavailable");
       return res.status(response.ok ? 200 : 503).send("");
     } catch (error) {
