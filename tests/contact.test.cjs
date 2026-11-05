@@ -28,10 +28,16 @@ test('confirmed provider response delivers only approved fields to the fixed rec
   assert.equal(sent.body.whatsapp_contacto,'https://wa.me/12025550123');
   assert.equal(sent.body.email,'test@example.com');
   assert.equal(sent.body._subject,'Nueva solicitud de contacto — ASSET');
-  assert.equal(sent.body._url,'https://getsmcaf.com/');
+  assert.equal(sent.body._url,'https://www.assetgestion.com/');
   assert.equal(sent.body._cc,undefined);
   assert.equal(sent.body._webhook,undefined);
   assert.equal(sent.options.redirect,'error');
+});
+
+test('accepts requests from the current domain', async()=>{
+  global.fetch=async()=>new Response(JSON.stringify({success:true}));
+  const result=await invoke({headers:{origin:'https://www.assetgestion.com'}});
+  assert.equal(result.statusCode,200);
 });
 
 test('rejects invalid input before contacting the provider', async()=>{

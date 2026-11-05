@@ -1,7 +1,7 @@
 "use strict";
 
 const PROVIDER = "https://formsubmit.co/ajax/Zanderjosue05@gmail.com";
-const SITE = "https://getsmcaf.com";
+const SITE = "https://www.assetgestion.com";
 const CONSENT = "Autorizo a ASSET a contactarme por WhatsApp para atender esta solicitud";
 const LIMITS = {
   nombre: 200, telefono: 24, email: 200, empresa: 200,
@@ -67,7 +67,12 @@ module.exports = async function contact(req, res) {
     res.setHeader("Allow", "POST, HEAD");
     return reply(req, res, 405, "method_not_allowed");
   }
-  const allowedOrigins = new Set([SITE, "https://www.getsmcaf.com"]);
+  const allowedOrigins = new Set([
+    SITE,
+    "https://assetgestion.com",
+    "https://getsmcaf.com",
+    "https://www.getsmcaf.com",
+  ]);
   for (const hostname of [process.env.VERCEL_URL, process.env.VERCEL_BRANCH_URL]) {
     if (hostname) allowedOrigins.add(`https://${hostname}`);
   }
